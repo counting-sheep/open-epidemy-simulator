@@ -14,9 +14,9 @@ contains
 		open(1, file=fname, position="APPEND", action="WRITE")
 		
 		write(1,*), n
-		write(1,*), "step=",time,"status mortal_rate contage_rate x y"
+		write(1,*), "step=",time, "boxsize 10.0 10.0 1.0 status mortal_rate contage_rate x y"
 		do i=1,n
-			write(1,*) agents(i,:)
+			write(1,*) agents(i,:)-5
 		end do
 		
 		close(1)
