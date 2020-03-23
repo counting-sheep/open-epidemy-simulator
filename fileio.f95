@@ -14,9 +14,9 @@ contains
 		open(1, file=fname, position="APPEND", action="WRITE")
 		
 		write(1,*), n
-		write(1,*), "step=",time, "boxsize 10.0 10.0 1.0 status x y"
+		write(1,*), "step=",time, "boxsize 10.0 10.0 1.0 status x y z"
 		do i=1,n
-			write(1,*) min(agent_status(i),4), agents(i,:)-5
+			write(1,*) min(agent_status(i),4), agents(i,:)-5, 0.01*i
 		end do
 		
 		close(1)
